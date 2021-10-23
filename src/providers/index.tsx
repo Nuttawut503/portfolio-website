@@ -1,4 +1,5 @@
 import React, { cloneElement } from 'react';
+import { ScrollProvider } from './scroll';
 import { ThemeProvider } from './theme';
 
 const ProviderComposer: React.FC<{
@@ -9,7 +10,7 @@ const ProviderComposer: React.FC<{
 
 export const ContextProvider: React.FC = ({children}) => {
   return (
-    <ProviderComposer contexts={[<ThemeProvider/>]}>
+    <ProviderComposer contexts={[<ScrollProvider/>, <ThemeProvider/>]}>
       {children}
     </ProviderComposer>
   );

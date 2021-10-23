@@ -6,11 +6,12 @@ interface ColorSet {
   primary: string;
   secondary: string;
   text: string;
-}
+  gradient: string;
+};
 
-export const ThemeColor = new Map<Theme, ColorSet>([
-  ['dark', {primary: 'bg-gray-600', secondary: 'bg-gray-800', text: 'text-gray-300'}],
-  ['light', {primary: 'bg-blue-500', secondary: 'bg-gray-200', text: 'text-black'}],
+export const ThemeColors = new Map<Theme, ColorSet>([
+  ['dark', {primary: 'bg-gray-600', secondary: 'bg-gray-800', text: 'text-gray-300', gradient: 'linear-gradient(to top, #283E51, #0A2342)'}],
+  ['light', {primary: 'bg-blue-500', secondary: 'bg-gray-200', text: 'text-black', gradient: 'linear-gradient(180deg, #f3904f, 60%, #3b4371)'}],
 ]);
 
 interface ThemeContent {

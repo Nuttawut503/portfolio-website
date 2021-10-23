@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ThemeColor, ThemeContext } from '../providers/theme';
+import { ThemeColors, ThemeContext } from '../providers/theme';
 
 interface Project {
   name: string;
@@ -74,9 +74,9 @@ const projects: Project[] = [
   },
 ];
 
-export const PortfolioTable: React.FC = () => {
+export const PortfolioTable = () => {
   const { theme } = useContext(ThemeContext);
-  return <div className={`mx-auto ${ThemeColor.get(theme)?.secondary} px-8 py-5 rounded-lg`} style={{maxWidth: '800px'}}>
+  return <div className={`mx-auto ${ThemeColors.get(theme)?.secondary} px-8 py-5 rounded-lg`} style={{maxWidth: '800px'}}>
     <div className="break-words" style={{gridTemplateColumns: '1fr auto'}}>
       <p className="font-bold text-xl">All public works and projects</p>
       {projects.map((project) => <div key={project.link} className="mt-3">
