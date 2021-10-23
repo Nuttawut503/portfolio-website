@@ -19,8 +19,8 @@ export const Greeting = () => {
 
   const { yPosition } = useContext(ScrollContext);
   return <>
-    <p className="relative text-center text-2xl" style={{right: `${yPosition * 1}px`, marginTop: '30vh'}}>
-      {greeting()}! My name is Nuttawut. I'm currently studying at KMUTT.<br/>
+    <p className="relative text-center text-2xl" style={{right: `${yPosition * 1.5}px`, marginTop: '21vh', textShadow: ''}}>
+      {greeting()}! My name is Nuttawut. I'm a Computer Science student at KMUTT.<br/>
       I'm interested in software development and now learning about full stack development<br/>
       which include front-end, back-end and devops too. I also like topics about Big Data and Microservices.<br/>
       I'm trying to improve myself to be better and better. Thank you for visitting my website. 😀 <br/>

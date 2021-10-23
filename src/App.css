@@ -1,0 +1,16 @@
+@keyframes gradient {
+	0% {
+		background-position-y: 0%;
+	}
+	50% {
+		background-position-y: 100%;
+	}
+	100% {
+		background-position-y: 0%;
+	}
+}
+
+#main {
+  animation: gradient 16s ease infinite;
+  background-size: 100% 300% !important;
+}
