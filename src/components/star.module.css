@@ -1,0 +1,16 @@
+@keyframes twinkling {
+  0%, 100% {
+    opacity: 0;
+  }
+  50%, 70% {
+    opacity: 1;
+  }
+}
+
+.star {
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  animation: twinkling 5s ease-in infinite;
+  border-radius: 50%;
+}

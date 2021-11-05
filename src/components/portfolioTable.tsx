@@ -1,5 +1,6 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { ThemeColors, ThemeContext } from '../providers/theme';
+import { Link } from '@mui/icons-material';
 
 interface Project {
   name: string;
@@ -10,23 +11,13 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: 'LO Tracker (Front-end)',
-    description: '(in progress, senior project) A website is to help teachers manage students progress in their class'
-      + ' by keeping students score in each quizzes/questions during the semester. The website allows teachers to create PLOs, LOs'
-      + ' and map those LOs to the PLOs and then map each questions to the LOs again. The website calculates progress score for each'
-      + ' students and also the whole class and show the result as a dashboard. This project can help teachers tracking progress of'
-      + ' students all over their time in the university.',
-    link: 'NapatJamjan/capstone-frontend',
-    tags: ['React', 'Apollo']
-  },
-  {
-    name: 'LO Tracker (Back-end)',
-    description: '(in progress, senior project) This is the backend part of LO Tracker website that is used to help teachers'
-      + ' tracking progress of their students in the class and it is written by Go. We collect data in Postgresql and use JWT to check'
-      + ' authorization and control access in the system. We use Redis to store token of users and Prisma to do version control for'
-      + ' managing our database. We use Graphql as a middleware to read requests and response needed data to users',
-    link: 'Nuttawut503/capstone-backend',
-    tags: ['Go', 'Graphql', 'Postgresql', 'Prisma', 'Redis', 'JWT']
+    name: 'LO Tracker',
+    description: '(in progress, a senior project) A website that help teachers to analyze their students\' progress throughout the class'
+      + ' by keeping students\' score from the examinations; besides, teachers have to create PLOs/LOs for the class and link them with the'
+      + ' questions that they saved in the website. In doing this, teachers would see a dashboard with graphs that has been interpreted'
+      + ' in many ways.',
+    link: 'NapatJamjan/LO-Tracker',
+    tags: ['Next.js', 'Go', 'GraphQL', 'Prisma', 'Redis', 'JWT']
   },
   {
     name: 'LXD',
@@ -61,12 +52,6 @@ const projects: Project[] = [
     tags: ['Go']
   },
   {
-    name: 'Hello-Java',
-    description: 'A simple code of OOP in Java',
-    link: 'Nuttawut503/java-hello-oop',
-    tags: ['Java']
-  },
-  {
     name: 'Portfolio-website',
     description: 'This website\'s source code',
     link: 'Nuttawut503/Portfolio-website',
@@ -74,15 +59,17 @@ const projects: Project[] = [
   },
 ];
 
-export const PortfolioTable = () => {
+export function PortfolioTable() {
   const { theme } = useContext(ThemeContext);
   return <div className={`mx-auto ${ThemeColors.get(theme)?.secondary} px-8 py-5 rounded-lg`} style={{maxWidth: '800px'}}>
     <div className="break-words" style={{gridTemplateColumns: '1fr auto'}}>
-      <p className="font-bold text-xl">All public works and projects</p>
-      {projects.map((project) => <div key={project.link} className="mt-3">
-          <a href={`https://github.com/${project.link}`} target="_blank" rel="noreferrer" className="text-blue-600">{project.name}</a><br/>
+      <p className="font-bold text-2xl">All public works and projects</p>
+      {projects.map((project) => <div key={project.link} className="mt-3 text-lg">
+          <a href={`https://github.com/${project.link}`} target="_blank" rel="noreferrer" className="text-blue-600">
+            {project.name}{' '}<Link style={{fontSize: 14}}/>
+          </a><br/>
           {project.description}<br/>
-          <span className="text-gray-600">tags: {project.tags.join(' ')}</span>
+          <span className="text-gray-600">tags: {project.tags.join(' / ')}</span>
       </div>)}
     </div>
   </div>;

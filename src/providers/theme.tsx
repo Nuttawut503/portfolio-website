@@ -11,7 +11,7 @@ interface ColorSet {
 
 export const ThemeColors = new Map<Theme, ColorSet>([
   ['dark', {primary: 'bg-gray-600', secondary: 'bg-gray-800', text: 'text-gray-300', gradient: 'linear-gradient(to top, #283E51, #0A2342)'}],
-  ['light', {primary: 'bg-blue-500', secondary: 'bg-gray-200', text: 'text-black', gradient: 'linear-gradient(to top, #f3904f, #3b4371)'}],
+  ['light', {primary: 'bg-blue-500', secondary: 'bg-gray-200', text: 'text-black', gradient: 'linear-gradient(to top, #076585, #bbf)'}],
 ]);
 
 interface ThemeContent {
@@ -22,7 +22,7 @@ interface ThemeContent {
 export const ThemeContext = createContext<ThemeContent>({theme: 'light', toggleTheme: () => {}});
 
 export const ThemeProvider: React.FC = ({children}) => {
-  const [theme, setTheme] = useState<Theme>('light');
+  const [theme, setTheme] = useState<Theme>('dark');
   const toggleTheme = () => setTheme(theme === 'light'? 'dark': 'light');
 
   return (

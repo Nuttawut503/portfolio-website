@@ -1,10 +1,9 @@
-import React from 'react';
 import { GitHub, LinkedIn } from '@mui/icons-material';
 import { ToggleThemeButton } from './toggleThemeButton';
 
-export const Navbar = () => {
+export function Navbar() {
   return <div className="flex justify-around pt-10">
-    <p className="text-5xl font-bold">Portfolio</p>
+    <p className="text-5xl font-bold pointer-events-none">Portfolio</p>
     <div className="flex space-x-5">
       <ToggleThemeButton/>
       <a className="self-center" href="https://github.com/Nuttawut503">
