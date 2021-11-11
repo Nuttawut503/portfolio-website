@@ -17,7 +17,7 @@ const projects: Project[] = [
       + ' questions that they saved in the website. In doing this, teachers would see a dashboard with graphs that has been interpreted'
       + ' in many ways.',
     link: 'NapatJamjan/LO-Tracker',
-    tags: ['Next.js', 'Go', 'GraphQL', 'Prisma', 'Redis', 'JWT']
+    tags: ['Next.js', 'Go', 'GraphQL (Schema-First)', 'Prisma (PostgreSQL)', 'Redis', 'JWT']
   },
   {
     name: 'LXD',

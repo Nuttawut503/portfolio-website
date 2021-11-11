@@ -11,7 +11,7 @@ interface ColorSet {
 
 export const ThemeColors = new Map<Theme, ColorSet>([
   ['dark', {primary: 'bg-gray-600', secondary: 'bg-gray-800', text: 'text-gray-300', gradient: 'linear-gradient(to top, #283E51, #0A2342)'}],
-  ['light', {primary: 'bg-blue-500', secondary: 'bg-gray-200', text: 'text-black', gradient: 'linear-gradient(to top, #076585, #bbf)'}],
+  ['light', {primary: 'bg-blue-500', secondary: 'bg-gray-200', text: 'text-black', gradient: 'linear-gradient(to top, #8785A5, #EDE4CC)'}],
 ]);
 
 interface ThemeContent {
