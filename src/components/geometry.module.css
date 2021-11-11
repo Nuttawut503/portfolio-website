@@ -1,26 +1,29 @@
 @keyframes playing {
   0% {
-    transform: rotate(0) translateY(0)
+    transform: scale(0) rotate(0) translateY(0)
   }
   20% {
-    transform: rotate(200deg) translateY(1rem)
+    transform: scale(1) rotate(200deg) translateY(1rem)
   }
   40% {
-    transform: rotate(360deg) translateY(3rem)
+    transform: scale(1.2) rotate(380deg) translateY(2rem)
   }
   60% {
-    transform: rotate(180deg) translateY(2rem)
+    transform: scale(1) rotate(240deg) translateY(3rem)
   }
   80% {
-    transform: rotate(100deg) translateY(1rem)
+    transform: scale(1) rotate(100deg) translateY(1rem)
   }
   100% {
-    transform: rotate(0) translateY(0)
+    transform: scale(0) rotate(0) translateY(3rem)
   }
 }
 
 .geometry {
   font-size: 1.5rem;
-  animation: playing 5s ease-in infinite;
+  transform: scale(0);
+  animation-name: playing;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
   border-radius: 50%;
 }
